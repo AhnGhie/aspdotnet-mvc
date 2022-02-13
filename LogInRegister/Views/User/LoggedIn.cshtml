@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "LoggedIn";
+}
+
+
+
+
+
+
+    @if (Session["UserId"] == null)
+    {
+        <h1> No User Found!</h1>
+    }
+    else
+    {
+        <div class="jumbotron">
+            <h1 class="text-center">Welcome @Session["FirstName"].ToString() @Session["LastName"].ToString()!</h1>
+        </div>
+       
+    }
+
+
+<div class="text-right">
+    @Html.ActionLink("Sign out", "LogOut")
+</div>
+
+    
+
+
