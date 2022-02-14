@@ -33,6 +33,7 @@ namespace LogInRegister.Controllers
                     Session["UserId"] = userVerify.UserId.ToString();
                     Session["Email"] = userVerify.Email.ToString();
                     Session["FirstName"] = userVerify.FirstName.ToString();
+                    Session["LastName"] = userVerify.LastName.ToString();
 
                     return RedirectToAction("LoggedIn");
                 }
@@ -74,7 +75,8 @@ namespace LogInRegister.Controllers
         public ActionResult LoggedIn()
         {
             if (Session["UserId"] != null)
-            {
+            {   
+
                 return View();
             }
             else
